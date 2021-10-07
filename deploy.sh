@@ -25,9 +25,9 @@ remove_old_site(){
 clone_website_code(){
 	if [ ! -d /var/www/html/.git ]; then
 
-	  	git clone https://github.com/octocat/Spoon-Knife /var/www/html/
+	  	sudo git clone https://github.com/octocat/Spoon-Knife /var/www/html/
 	else
-		cd /var/www/html/;
+		sudo cd /var/www/html/;
 		sudo git pull https://github.com/octocat/Spoon-Knife
 	fi
 }
