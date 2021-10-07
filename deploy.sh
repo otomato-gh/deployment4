@@ -5,7 +5,7 @@ print_title(){
 }
 
 print_date(){
-	echo Date: $(date)
+	echo Date: $(date +"%d-%m-%Y %H-%M-%S")
 }
 # pass package name to function
 install_package(){
@@ -13,6 +13,9 @@ install_package(){
 }
 apt_update(){
 	sudo apt-get update
+}
+check_apache2(){
+       sudo systemctl is-active --quiet apache2 $$ echo "Service is running" || echo "none";
 }
 remove_old_site(){
 	if [ ! -d /var/www/html/.git ]; then
