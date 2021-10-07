@@ -47,6 +47,8 @@ install_package git
 print_separator
 install_package apache2
 print_separator
+check_apache2
+print_separator
 remove_old_site
 print_separator
 clone_website_code
