@@ -27,7 +27,7 @@ clone_website_code(){
 
 	  	sudo git clone https://github.com/octocat/Spoon-Knife /var/www/html/
 	else
-		sudo cd /var/www/html/;
+		cd /var/www/html/;
 		sudo git pull https://github.com/octocat/Spoon-Knife
 	fi
 }
