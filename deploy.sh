@@ -15,6 +15,12 @@ apt_update(){
 	sudo apt-get update
 }
 
+clone_website_code(){
+	if ![ -d /var/www/html/.git]; then
+	  git clone https://github.com/octocat/Spoon-Knife /var/www/html/
+	fi
+}
+
 print_title
 print_date
 apt_update
