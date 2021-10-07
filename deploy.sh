@@ -24,11 +24,23 @@ clone_website_code(){
 	  git clone https://github.com/octocat/Spoon-Knife /var/www/html/
 	fi
 }
+print_separator(){
+	echo ------------------------------------------------------------
+}
+
+
+
 
 print_title
+print_separator
 print_date
+print_separator
 apt_update
 install_package git
+print_separator
 install_package apache2
+print_separator
 remove_old_site
+print_separator
 clone_website_code
+print_separator
