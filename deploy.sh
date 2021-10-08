@@ -15,7 +15,7 @@ apt_update(){
 	sudo apt-get update
 }
 check_apache2(){
-       sudo systemctl is-active --quiet apache2 && echo "Service is running" || echo "none";
+       sudo systemctl is-active --quiet apache2 && echo "Service is running" || echo "Apache is not installed";
 }
 remove_old_site(){
 	if [ ! -d /var/www/html/.git ]; then
